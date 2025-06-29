@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #33416E;
+}
+
+header {
+    background-color: #192649;
+}
+
+body>header>div>div.d-flex.flex-wrap.align-items-center.justify-content-center>a>img {
+    width: 80px;
+    height: auto;
+}
+
+body>header>div>div>div>a>img {
+    width: 50px;
+    height: auto;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #f4e40f;
+}
+
+body>header>div>div>ul>li:nth-child(1)>a {
+    color: #f4e40f;
+    border-bottom: 1px solid #f4e40f;
+}
+
+body>header>div>div:nth-child(2)>form>input {
+    width: 300px;
+}
+
+.dropdown-toggle::after {
+    margin: 0px;
+    color: white;
+}
+
+body>header>div>div:nth-child(2)>form>button {
+    background-color: #3d486d;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+#goToCart {
+    background-color: #3d486d;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+.card.custom-style {
+    border-radius: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card.custom-style img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: 1px solid #33416E;
+    margin-bottom: 20px;
+}
+
+.card.custom-style:hover {
+    transform: scale(1.08);
+    z-index: 100;
+    box-shadow: 0px 0px 20px #f4e40f  ;
+}
+
+
+.img.img-fluid {
+    object-fit: cover;
+    height: 100%;
+}
+
+.card-title.title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5rem;
+}

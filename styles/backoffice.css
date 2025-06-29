@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #33416E;
+}
+
+header{
+    background-color: #192649;
+}
+
+body > header > div > div > div > a > img{
+    width: 40px;
+    height: auto;
+}
+
+body > header > div > div.d-flex.flex-wrap.align-items-center.justify-content-center > a > img{
+    width: 80px;
+    height: auto;
+}
+
+.nav-link{
+    color: #ffffff;
+    text-decoration: none; 
+}
+
+.nav-link:hover{
+    color: #f4e40f;   
+}
+
+body > header > div > div > ul > li:nth-child(2) > a{
+    color: #f4e40f;
+    border-bottom: 1px solid #f4e40f;
+}
+
+#goToEcommerce{
+    background-color: #3d486d;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+#tableDiv{
+    background-color: #26304B;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#tableDiv > table > thead > tr > th{
+    background-color: #33416E;
+    color: white;
+}
+
+#addProductBtn {
+    background-color: #f4e40f;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal migliorato */
+.modal-content {
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* thead {
+  background: linear-gradient(to right, #3a4a6b, #2e3954);
+  color: white;
+}
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tbody tr:hover {
+  background-color: #e0eaff;
+} */
+
+#tableBody > tr:nth-child(1) > td:nth-child(1){
+    width: 14%;
+}
+
+#searchDiv{
+    width: 30%;
+}
+
+#cercaProdotto{
+    border-radius: 20px 0 0 20px;
+}
+
+#cercaProdotto:focus{
+    box-shadow: none;
+    outline: none;
+    border-color: none;
+}
+
+#button-addon2{
+    border-radius: 0 20px 20px 0;
+    background: white;
+    color: black;
+    font-weight: bold;
+    box-shadow: none;
+    height: 35.5px;
+    z-index: 20;
+}
+
+
+
+
+

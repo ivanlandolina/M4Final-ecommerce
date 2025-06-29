@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backoffice | BluStore</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icons8-disk-96.png" type="image/x-icon" />
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/9.1.0/mdb.min.css" rel="stylesheet" />
+    <!-- Icone Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <!-- JS personalizzato -->
+    <script src="scripts/backoffice.js" defer></script>
+    <link href="styles/backoffice.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="p-3 mb-3">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/index.html"
+                    class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none"><img
+                        src="assets/icon2.jpg"></a>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 ms-3">
+                    <li><a href="" class="nav-link px-2">Dashboard</a></li>
+                    <li><a href="" class="nav-link px-2">Prodotti</a></li>
+                    <li><a href="" class="nav-link px-2">Ordini</a></li>
+                    <li><a href="" class="nav-link px-2">Products</a></li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-3">
+                    <a href="index.html"><button id="goToEcommerce" class="btn btn-primary"><i class="bi bi-shop"></i> Vai
+                            all'e-commerce</button></a>
+                    <div class="dropdown text-end"> <a href="#"
+                            class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+                            data-bs-toggle="dropdown" aria-expanded="false"> <img src="assets/icons8-alieno-100.png"
+                                alt="mdo" width="32" height="32" class="rounded-circle"> </a>
+                        <ul class="dropdown-menu text-small">
+                            <li><a class="dropdown-item" href="#">Impostazioni</a></li>
+                            <li><a class="dropdown-item" href="#">Profilo</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="tableDiv" class="container py-4">
+        <table class="table table-striped table-hover">
+            <div class="d-flex justify-content-between">
+                <div class="input-group mb-3" id="searchDiv">
+                    <input id="cercaProdotto" type="text" class="form-control" placeholder="Cerca un prodotto...">
+                    <button class="btn btn-warning" type="button" id="button-addon2"><i
+                            class="bi bi-search"></i></button>
+                </div>
+                <button id="addProductBtn" class="btn btn-primary mb-3" data-bs-toggle="modal"
+                    data-bs-target="#addProductModal">
+                    <i class="bi bi-plus-circle"></i> Aggiungi Prodotto
+                </button>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModal"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Aggiungi un nuovo prodotto</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form style="width: 26rem;">
+                                <!-- Nome input -->
+                                <div data-mdb-input-init class="form-outline mb-4">
+                                    <input type="text" id="nome" class="form-control" required />
+                                    <label class="form-label" for="form4Example1">Nome del prodotto</label>
+                                </div>
+
+                                <!-- Brand input -->
+                                <div data-mdb-input-init class="form-outline mb-4">
+                                    <input type="text" id="brand" class="form-control" required />
+                                    <label class="form-label" for="form4Example2">Brand</label>
+                                </div>
+
+                                <!-- Descrizione input -->
+                                <div data-mdb-input-init class="form-outline mb-4">
+                                    <textarea class="form-control" id="descrizione" rows="4"></textarea>
+                                    <label class="form-label" for="form4Example3">Descrizione del prodotto</label>
+                                </div>
+
+                                <!-- Immagine input -->
+                                <div data-mdb-input-init class="form-outline mb-4">
+                                    <input type="text" id="urlImmagine" class="form-control" required />
+                                    <label class="form-label" for="form4Example2">URL dell'immagine</label>
+                                </div>
+
+                                <!-- Prezzo input -->
+                                <div data-mdb-input-init class="form-outline mb-4">
+                                    <input type="number" id="prezzo" class="form-control" required />
+                                    <label class="form-label" for="form4Example2">Prezzo (€)</label>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger"
+                                        data-bs-dismiss="modal">Annulla</button>
+                                    <button id="button-save" type="submit" class="btn btn-success">Salva</button>
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Immagine</th>
+                    <th scope="col">Prezzo</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Le righe della tabella saranno inserite qui tramite JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <!-- MDB -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/9.1.0/mdb.umd.min.js"></script>
+</body>
+
+</html>
