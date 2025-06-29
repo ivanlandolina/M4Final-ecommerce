@@ -77,7 +77,7 @@ function costruisciCard(dvd) {
 
     const btnInfo = document.createElement('a');
     btnInfo.id = 'info';
-    btnInfo.href = `/dettaglio.html?id=${dvd._id}`;
+    btnInfo.href = `./dettaglio.html?id=${dvd._id}`;
     btnInfo.target = '_blank';
     btnInfo.className = 'btn btn-sm btn-secondary';
     btnInfo.innerHTML = '<i class="bi bi-info-circle"></i> Info';
